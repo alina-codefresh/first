@@ -1,9 +1,18 @@
 FROM python:3.7-alphine
 
-WORKDIR /app
+WORKDIR /code
 
-RUN touch test.txt
+ENV FLASK_APP=app.py
+ENV FLASSK_RUN_HOST=0.0.0.0
 
-COPY . .git
+RUN apk add --no-cache gcc musl-dev linux-headers
 
-CMD [ "ls", "/app" ]
+COPY requirements.txt requirements.txt
+
+RUN pip install - r requirements.txt
+
+EXPOSE 5000
+
+COPY . .
+
+CMD [ "flask", "run"]
