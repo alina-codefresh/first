@@ -1,9 +1,9 @@
-FROM alpine
+FROM python:3.7-alphine
 
 WORKDIR /app
 
 RUN touch test.txt
 
-COPY . .
+COPY . .git
 
 CMD [ "ls", "/app" ]
