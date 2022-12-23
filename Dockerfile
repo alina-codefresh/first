@@ -1,18 +1,13 @@
-FROM python:3.7-alpine
+FROM node:16-alpine
 
-WORKDIR /code
+WORKDIR /app
 
-ENV FLASK_APP=app.py
-ENV FLASSK_RUN_HOST=0.0.0.0
+COPY package.json package.json
 
-RUN apk add --no-cache gcc musl-dev linux-headers
-
-COPY requirements.txt requirements.txt
-
-#RUN pip install - r requirements.txt
-
-EXPOSE 5000
+RUN yarn install
 
 COPY . .
 
-CMD [ "flask", "run"]
+EXPOSE 8080
+
+CMD [ "node", "index.js"]
