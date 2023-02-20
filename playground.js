@@ -16,7 +16,7 @@ let year = 2015;
 if (year < 2015) {
   alert( 'Too early...' );
 } else if (year > 2015) {
-  alert( 'Too late' );
+  alert( 'Great day!' );
 } else {
-  alert( 'Exactly!' );
+  alert( 'Best of the best!' );
 }
