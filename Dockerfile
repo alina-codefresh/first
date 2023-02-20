@@ -1,9 +1,13 @@
-FROM alpine
+FROM node:16-alpine
 
 WORKDIR /app
 
-RUN touch test.txt
+COPY package.json package.json
+
+RUN yarn install
 
 COPY . .
 
-CMD [ "ls", "/app" ]
+EXPOSE 8080
+
+CMD [ "node", "index.js"]
