@@ -1,0 +1,7 @@
+version: "1.0"
+steps:
+  step_name_test:
+    image: "alpine"
+    commands:
+      - echo Overriden!!!!
+
