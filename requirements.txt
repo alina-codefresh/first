@@ -2,6 +2,3 @@ variable test
 test pull with label
 
 test trigger for cf run step + child pipeline
-attemp 2
-test
-added commit test trigger
