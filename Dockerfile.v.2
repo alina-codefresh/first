@@ -6,6 +6,8 @@ WORKDIR /app
 
 COPY package.json package.json
 
+ARG test
+ 
 RUN yarn install
 
 COPY . .
