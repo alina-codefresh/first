@@ -17,3 +17,9 @@ RUN yarn install
 COPY . .
 EXPOSE 8080
 CMD [ "node", "index.js"]
+
+FROM alpine:latest  AS build3
+RUN apk --no-cache add ca-certificates
+WORKDIR /root/
+COPY --from=builder /go/src/github.com/alexellis/href-counter/app ./
+CMD ["./app"]
