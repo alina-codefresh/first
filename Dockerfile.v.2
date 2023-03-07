@@ -1,0 +1,19 @@
+
+
+FROM node:16-alpine
+
+WORKDIR /app
+
+COPY package.json package.json
+
+ARG test2
+
+RUN echo $test2
+
+RUN yarn install
+
+COPY . .
+
+EXPOSE 8080
+
+CMD [ "node", "index.js"]
