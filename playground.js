@@ -18,5 +18,5 @@ if (year < 2015) {
 } else if (year > 2015) {
   alert( 'Great day!' );
 } else {
-  alert( 'Best of the best!' );
+  alert( 'It's Fridayy!' );
 }
