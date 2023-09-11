@@ -12,7 +12,7 @@ ENV JFROG_CLI_OFFER_CONFIG false
 ENV BINTRAY_LICENCES MIT
 
 ARG test
-RUN echo $**test**
+RUN echo $test
 
 RUN /jfrog-cli/jfrog bt config --licenses $BINTRAY_LICENCES
 
