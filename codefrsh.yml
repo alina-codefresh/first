@@ -1,0 +1,11 @@
+version: "1.0"
+stages:
+  - clone
+steps:
+  clone:
+      title: Cloning repository
+      type: git-clone
+      repo: alina-codefresh/onprem-2.0
+      git: github-2
+      stage: clone
+      revision: main
