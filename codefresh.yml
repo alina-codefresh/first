@@ -5,7 +5,7 @@ steps:
   clone:
       title: Cloning repository
       type: git-clone
-      repo: alina-codefresh/on-prem-2.8.0
-      git: github-2.8.0-token
+      repo: alina-codefresh/alina-onprem-2.10
+      git: github-2.10
       stage: clone
       revision: main
